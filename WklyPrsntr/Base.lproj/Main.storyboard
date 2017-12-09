@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eOF-kd-eBx">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Presentation View Controller-->
+        <scene sceneID="5YE-0i-GET">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eOF-kd-eBx" customClass="PresentationViewController" customModule="WklyPrsntr" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bvb-aI-mrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="-264"/>
+        </scene>
+        <!--Slide View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SlideViewController" id="BYZ-38-t0r" customClass="SlideViewController" customModule="WklyPrsntr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H19-qj-ZTK" customClass="CountDownButton" customModule="WklyPrsntr" customModuleProvider="target">
+                                <rect key="frame" x="904" y="648" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.94305026698571426" green="0.12112165178571428" blue="0.031556919642857145" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ev2-3q-0wx"/>
+                                    <constraint firstAttribute="height" constant="100" id="zbx-W7-qFv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.91372549020000005" green="0.12112165178571428" blue="0.031556919642857145" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.91372549020000005" green="0.95294117649999999" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uxx-qu-iI4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrs-PO-UBD">
+                                <rect key="frame" x="20" y="337" width="984" height="95"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="79"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L19-RJ-Dpv">
+                                <rect key="frame" x="479" y="295.5" width="66.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMd-Tp-JGT" customClass="ProgressRingView" customModule="WklyPrsntr" customModuleProvider="target">
+                                <rect key="frame" x="462" y="20" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="D3f-cV-YVj"/>
+                                    <constraint firstAttribute="height" constant="100" id="vHN-dw-W0e"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHF-MG-epO">
+                                <rect key="frame" x="478" y="53" width="68.5" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zrs-PO-UBD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cwu-k2-kHY"/>
+                            <constraint firstItem="L19-RJ-Dpv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IXi-rT-2mi"/>
+                            <constraint firstItem="eHF-MG-epO" firstAttribute="centerX" secondItem="tMd-Tp-JGT" secondAttribute="centerX" id="Isc-GS-2Kl"/>
+                            <constraint firstItem="Zrs-PO-UBD" firstAttribute="top" secondItem="L19-RJ-Dpv" secondAttribute="bottom" constant="8.5" id="L11-G1-eAc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zrs-PO-UBD" secondAttribute="trailing" constant="20" id="QZX-Wo-vo8"/>
+                            <constraint firstItem="eHF-MG-epO" firstAttribute="centerY" secondItem="tMd-Tp-JGT" secondAttribute="centerY" id="UIK-u5-ULX"/>
+                            <constraint firstItem="tMd-Tp-JGT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="UTi-4Q-Upr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H19-qj-ZTK" secondAttribute="trailing" constant="20" id="UaX-CO-zUp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H19-qj-ZTK" secondAttribute="bottom" constant="20" id="ckZ-ub-8Ld"/>
+                            <constraint firstItem="Zrs-PO-UBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dj1-Px-u8v"/>
+                            <constraint firstItem="Zrs-PO-UBD" firstAttribute="top" secondItem="L19-RJ-Dpv" secondAttribute="bottom" constant="8.5" id="frY-gQ-JDR"/>
+                            <constraint firstItem="tMd-Tp-JGT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="snw-FF-oDJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="L19-RJ-Dpv" id="YV3-AJ-jhr"/>
+                        <outlet property="progressView" destination="tMd-Tp-JGT" id="kqV-Tv-qPd"/>
+                        <outlet property="startStopButton" destination="H19-qj-ZTK" id="i6D-3j-gCI"/>
+                        <outlet property="timerLabel" destination="eHF-MG-epO" id="g9M-Yr-RbF"/>
+                        <outlet property="topicLabel" destination="Zrs-PO-UBD" id="HEU-3L-man"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286.5234375" y="654.6875"/>
+        </scene>
+    </scenes>
+</document>

@@ -31,7 +31,7 @@ class PresentationViewController: UIPageViewController, UIPageViewControllerData
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: id) as! SlideViewController
         controller.pageIndex = offset
         controller.topic = topic
-        controller.colorMode = offset % 2 == 0 ? .bright : .dark
+        controller.colorMode = offset % 2 == 0 ? .bright : .coding
         return controller
     }
         

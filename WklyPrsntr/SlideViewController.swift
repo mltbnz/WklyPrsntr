@@ -15,6 +15,7 @@ protocol Indexable {
 enum ColorMode {
     case bright
     case dark
+    case coding
     
     var backgroundColor: UIColor {
         switch self {
@@ -22,6 +23,8 @@ enum ColorMode {
             return .white
         case .dark:
             return .black
+        case .coding:
+            return .codingBackground
         }
     }
     
@@ -31,7 +34,25 @@ enum ColorMode {
             return .black
         case .dark:
             return .white
+        case .coding:
+            return codingColorSet.randomItem!
         }
+    }
+    
+    var codingColorSet: [UIColor] {
+        return [
+            UIColor.funkyBlue,
+            UIColor.funkyYellow,
+            UIColor.funkyPurple
+        ]
+    }
+    
+    static var sets: [ColorMode] {
+        return [
+            ColorMode.bright,
+            ColorMode.dark,
+            ColorMode.coding
+        ]
     }
 }
 

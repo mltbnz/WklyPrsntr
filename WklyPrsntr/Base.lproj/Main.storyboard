@@ -87,13 +87,6 @@
                                     <outlet property="delegate" destination="I5r-Ug-gDi" id="r7z-w0-XZD"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qK0-QS-2x9">
-                                <rect key="frame" x="982" y="354" width="22" height="22"/>
-                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="IdJ-PN-Oxk" kind="presentation" identifier="addTopicSegue" id="Btr-uL-qdU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8V8-v5-4cC">
                                 <rect key="frame" x="412" y="242" width="200" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,9 +108,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qK0-QS-2x9">
+                                <rect key="frame" x="852" y="354" width="22" height="22"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="IdJ-PN-Oxk" kind="presentation" identifier="addTopicSegue" id="Btr-uL-qdU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qK0-QS-2x9" firstAttribute="trailing" secondItem="Job-ct-1Bo" secondAttribute="trailing" id="0cS-5Z-sqy"/>
                             <constraint firstItem="Job-ct-1Bo" firstAttribute="height" secondItem="1JV-1U-025" secondAttribute="height" multiplier="0.5" id="4lI-ve-seo"/>
                             <constraint firstItem="Job-ct-1Bo" firstAttribute="leading" secondItem="ECd-qY-ayT" secondAttribute="leading" constant="150" id="5Sq-bA-aQI">
                                 <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
@@ -130,7 +131,6 @@
                             </constraint>
                             <constraint firstItem="8V8-v5-4cC" firstAttribute="centerX" secondItem="1JV-1U-025" secondAttribute="centerX" id="gTm-Yf-Ulr"/>
                             <constraint firstItem="Job-ct-1Bo" firstAttribute="bottom" secondItem="ECd-qY-ayT" secondAttribute="bottom" id="hac-rB-zTP"/>
-                            <constraint firstItem="ECd-qY-ayT" firstAttribute="trailing" secondItem="qK0-QS-2x9" secondAttribute="trailing" constant="20" id="lud-O5-jnK"/>
                             <constraint firstItem="Onz-fM-6NM" firstAttribute="centerX" secondItem="1JV-1U-025" secondAttribute="centerX" id="q2B-FX-kvP"/>
                             <constraint firstItem="Onz-fM-6NM" firstAttribute="top" secondItem="ECd-qY-ayT" secondAttribute="top" constant="60" id="qyK-U8-XCz"/>
                             <constraint firstItem="Job-ct-1Bo" firstAttribute="top" secondItem="qK0-QS-2x9" secondAttribute="bottom" constant="8" id="vA1-Cj-Mgi"/>
@@ -154,36 +154,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Presenter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FkS-sN-W33">
-                                <rect key="frame" x="362.5" y="264" width="300" height="60"/>
-                                <accessibility key="accessibilityConfiguration" identifier="presenterTextField" label="presenterTextField"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="eMg-4Z-thN"/>
-                                    <constraint firstAttribute="height" constant="60" id="iu5-0n-0a5"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IdJ-PN-Oxk" id="FcY-7L-mER"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Topic" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zdk-rM-1Ep">
-                                <rect key="frame" x="362" y="354" width="300" height="60"/>
-                                <accessibility key="accessibilityConfiguration" identifier="topicTextField" label="topicTextField"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="1e3-Wz-G16"/>
-                                    <constraint firstAttribute="height" constant="60" id="EMJ-aS-V06"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Tai-bs-hHg"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="cEi-ud-a49"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IdJ-PN-Oxk" id="auu-A0-y2u"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59F-Rk-hEP">
                                 <rect key="frame" x="886" y="40" width="118" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -198,8 +168,38 @@
                                     <action selector="addTopicAction:" destination="IdJ-PN-Oxk" eventType="touchUpInside" id="Zwg-h2-XcM"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Presenter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FkS-sN-W33">
+                                <rect key="frame" x="362.5" y="120" width="300" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="presenterTextField" label="presenterTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="eMg-4Z-thN"/>
+                                    <constraint firstAttribute="height" constant="60" id="iu5-0n-0a5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IdJ-PN-Oxk" id="FcY-7L-mER"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Topic" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zdk-rM-1Ep">
+                                <rect key="frame" x="362" y="210" width="300" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="topicTextField" label="topicTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1e3-Wz-G16"/>
+                                    <constraint firstAttribute="height" constant="60" id="EMJ-aS-V06"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Tai-bs-hHg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="cEi-ud-a49"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IdJ-PN-Oxk" id="auu-A0-y2u"/>
+                                </connections>
+                            </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuk-yS-SX3">
-                                <rect key="frame" x="362" y="444" width="300" height="216"/>
+                                <rect key="frame" x="362" y="300" width="300" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="wnZ-5t-JtO"/>
                                 </constraints>
@@ -230,7 +230,7 @@
                             <constraint firstItem="Zdk-rM-1Ep" firstAttribute="centerX" secondItem="BRc-UY-97x" secondAttribute="centerX" id="AOw-y4-Av5"/>
                             <constraint firstItem="ZK8-Bk-gYN" firstAttribute="leading" secondItem="oXC-ja-TK9" secondAttribute="leading" constant="20" id="Ic0-vK-EW1"/>
                             <constraint firstItem="Zdk-rM-1Ep" firstAttribute="top" secondItem="FkS-sN-W33" secondAttribute="bottom" constant="30" id="aIQ-pE-9bT"/>
-                            <constraint firstItem="FkS-sN-W33" firstAttribute="top" secondItem="oXC-ja-TK9" secondAttribute="top" constant="244" id="fuh-lk-Lwy"/>
+                            <constraint firstItem="FkS-sN-W33" firstAttribute="top" secondItem="oXC-ja-TK9" secondAttribute="top" constant="100" id="fuh-lk-Lwy"/>
                             <constraint firstItem="uuk-yS-SX3" firstAttribute="top" secondItem="Zdk-rM-1Ep" secondAttribute="bottom" constant="30" id="gnU-Ft-ozU"/>
                             <constraint firstItem="ZK8-Bk-gYN" firstAttribute="top" secondItem="oXC-ja-TK9" secondAttribute="top" constant="20" id="hYh-tK-pNa"/>
                             <constraint firstItem="FkS-sN-W33" firstAttribute="centerX" secondItem="BRc-UY-97x" secondAttribute="centerX" id="jAD-Sr-FaK"/>

@@ -21,6 +21,7 @@
 		943E839A1FDD27AB007687C1 /* AddTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E83991FDD27AB007687C1 /* AddTopicViewController.swift */; };
 		943E839C1FDD2D85007687C1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E839B1FDD2D85007687C1 /* StartViewController.swift */; };
 		943E839E1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E839D1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift */; };
+		949C58631FDD9D1C00832537 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949C58621FDD9D1C00832537 /* UIColor+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		943E83991FDD27AB007687C1 /* AddTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTopicViewController.swift; sourceTree = "<group>"; };
 		943E839B1FDD2D85007687C1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		943E839D1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicPreviewTableViewCell.swift; sourceTree = "<group>"; };
+		949C58621FDD9D1C00832537 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				942D1ECC1FDC497D009E2EAB /* AnimatorFactory.swift */,
 				942D1EC81FDC40C5009E2EAB /* CountDown.swift */,
+				949C58621FDD9D1C00832537 /* UIColor+Additions.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				943E839A1FDD27AB007687C1 /* AddTopicViewController.swift in Sources */,
 				942D1ED31FDC5AF5009E2EAB /* ProgressRing.swift in Sources */,
 				942D1ECD1FDC497D009E2EAB /* AnimatorFactory.swift in Sources */,
+				949C58631FDD9D1C00832537 /* UIColor+Additions.swift in Sources */,
 				943E839E1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift in Sources */,
 				943E839C1FDD2D85007687C1 /* StartViewController.swift in Sources */,
 				942D1ECB1FDC446B009E2EAB /* CountDownButton.swift in Sources */,

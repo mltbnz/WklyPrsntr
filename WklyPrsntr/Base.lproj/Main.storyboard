@@ -186,13 +186,13 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59F-Rk-hEP">
                                 <rect key="frame" x="886" y="40" width="118" height="42"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118" id="7Zv-A4-FnL"/>
                                     <constraint firstAttribute="height" constant="42" id="C1J-Ek-yjW"/>
                                 </constraints>
                                 <state key="normal" title="Add Topic">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="addTopicAction:" destination="IdJ-PN-Oxk" eventType="touchUpInside" id="Zwg-h2-XcM"/>
@@ -208,15 +208,31 @@
                                     <outlet property="delegate" destination="IdJ-PN-Oxk" id="sdP-vq-Zb8"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZK8-Bk-gYN">
+                                <rect key="frame" x="20" y="40" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uMP-C6-u0Z"/>
+                                    <constraint firstAttribute="width" constant="69" id="zgR-sa-lvu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelAction:" destination="IdJ-PN-Oxk" eventType="touchUpInside" id="mR5-kr-9Oz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uuk-yS-SX3" firstAttribute="centerX" secondItem="BRc-UY-97x" secondAttribute="centerX" id="5Yu-v6-hzs"/>
                             <constraint firstItem="59F-Rk-hEP" firstAttribute="top" secondItem="oXC-ja-TK9" secondAttribute="top" constant="20" id="6ff-u1-Baw"/>
                             <constraint firstItem="Zdk-rM-1Ep" firstAttribute="centerX" secondItem="BRc-UY-97x" secondAttribute="centerX" id="AOw-y4-Av5"/>
+                            <constraint firstItem="ZK8-Bk-gYN" firstAttribute="leading" secondItem="oXC-ja-TK9" secondAttribute="leading" constant="20" id="Ic0-vK-EW1"/>
                             <constraint firstItem="Zdk-rM-1Ep" firstAttribute="top" secondItem="FkS-sN-W33" secondAttribute="bottom" constant="30" id="aIQ-pE-9bT"/>
                             <constraint firstItem="FkS-sN-W33" firstAttribute="top" secondItem="oXC-ja-TK9" secondAttribute="top" constant="244" id="fuh-lk-Lwy"/>
                             <constraint firstItem="uuk-yS-SX3" firstAttribute="top" secondItem="Zdk-rM-1Ep" secondAttribute="bottom" constant="30" id="gnU-Ft-ozU"/>
+                            <constraint firstItem="ZK8-Bk-gYN" firstAttribute="top" secondItem="oXC-ja-TK9" secondAttribute="top" constant="20" id="hYh-tK-pNa"/>
                             <constraint firstItem="FkS-sN-W33" firstAttribute="centerX" secondItem="BRc-UY-97x" secondAttribute="centerX" id="jAD-Sr-FaK"/>
                             <constraint firstItem="oXC-ja-TK9" firstAttribute="trailing" secondItem="59F-Rk-hEP" secondAttribute="trailing" constant="20" id="wz7-ng-n92"/>
                         </constraints>
@@ -230,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIi-iC-GpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-668" y="582"/>
+            <point key="canvasLocation" x="-668.5546875" y="581.25"/>
         </scene>
         <!--Presentation View Controller-->
         <scene sceneID="5YE-0i-GET">

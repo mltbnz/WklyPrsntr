@@ -43,6 +43,9 @@ class AddTopicViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension AddTopicViewController: UITextFieldDelegate {

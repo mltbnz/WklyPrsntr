@@ -34,10 +34,13 @@ class PresentationViewController: UIPageViewController, UIPageViewControllerData
         controller.colorMode = offset % 2 == 0 ? .bright : .dark
         return controller
     }
-    
+        
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let pageContent: SlideViewController = viewController as! SlideViewController
         var index = pageContent.pageIndex
+        if slides.count == 1 {
+            return pageContent
+        }
         index! -= 1
         guard index! >= 0 else {
             return slides.last
@@ -48,6 +51,9 @@ class PresentationViewController: UIPageViewController, UIPageViewControllerData
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let pageContent: SlideViewController = viewController as! SlideViewController
         var index = pageContent.pageIndex
+        if slides.count == 1 {
+            return pageContent
+        }
         index! += 1
         guard index! < slides.count else {
             return slides.first

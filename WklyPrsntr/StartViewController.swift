@@ -19,14 +19,19 @@ class StartViewController: UIViewController {
         tableView.isEditing = true
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if topics.isEmpty && identifier == "startWeekySegue" {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addTopicSegue" {
             let dest = segue.destination as! AddTopicViewController
             dest.delegate = self
         } else if segue.identifier == "startWeekySegue" {
-            guard !topics.isEmpty else {
-                return
-            }
             let dest = segue.destination as! PresentationViewController
             dest.topics = topics
         }

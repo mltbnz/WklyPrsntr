@@ -55,7 +55,7 @@ class SlideViewController: UIViewController, Indexable {
 
     var pageIndex: Int!
     
-    var countDown: CountDown!
+    var countDown: CountDown?
     var topic: Topic!
     var colorMode: ColorMode! {
         didSet {
@@ -68,7 +68,7 @@ class SlideViewController: UIViewController, Indexable {
     }
     
     fileprivate func setOutlets() {
-        topicLabel.text = topic.topic
+        topicLabel.text = topic.title
         nameLabel.text = topic.presenter
         nameLabel.underline()
         timerLabel.text = CountDown.timeFormatted(topic.secondos)
@@ -86,12 +86,22 @@ class SlideViewController: UIViewController, Indexable {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        guard let timer = countDown else {
+            return
+        }
+        if timer.state == .counting {
+            timer.endTimer()
+        }
+    }
+    
     @IBAction func toggleAction(_ sender: CountDownButton) {
         switch sender.buttonState {
         case .start:
-            countDown.startTimer()
+            countDown?.startTimer()
         case .stop:
-            countDown.endTimer()
+            countDown?.endTimer()
         }
         sender.buttonState = sender.buttonState.opposite
     }

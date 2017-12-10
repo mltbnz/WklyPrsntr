@@ -18,6 +18,9 @@
 		942D1ECF1FDC49F5009E2EAB /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D1ECE1FDC49F5009E2EAB /* Topic.swift */; };
 		942D1ED11FDC4B1F009E2EAB /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D1ED01FDC4B1E009E2EAB /* PresentationViewController.swift */; };
 		942D1ED31FDC5AF5009E2EAB /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D1ED21FDC5AF5009E2EAB /* ProgressRing.swift */; };
+		943E839A1FDD27AB007687C1 /* AddTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E83991FDD27AB007687C1 /* AddTopicViewController.swift */; };
+		943E839C1FDD2D85007687C1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E839B1FDD2D85007687C1 /* StartViewController.swift */; };
+		943E839E1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943E839D1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		942D1ECE1FDC49F5009E2EAB /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		942D1ED01FDC4B1E009E2EAB /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		942D1ED21FDC5AF5009E2EAB /* ProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRing.swift; sourceTree = "<group>"; };
+		943E83991FDD27AB007687C1 /* AddTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTopicViewController.swift; sourceTree = "<group>"; };
+		943E839B1FDD2D85007687C1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		943E839D1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicPreviewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 			children = (
 				942D1EB81FDC1804009E2EAB /* SlideViewController.swift */,
 				942D1ED01FDC4B1E009E2EAB /* PresentationViewController.swift */,
+				943E83991FDD27AB007687C1 /* AddTopicViewController.swift */,
+				943E839B1FDD2D85007687C1 /* StartViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -89,6 +97,7 @@
 			children = (
 				942D1ECA1FDC446B009E2EAB /* CountDownButton.swift */,
 				942D1ED21FDC5AF5009E2EAB /* ProgressRing.swift */,
+				943E839D1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift */,
 			);
 			name = "Views and Controls";
 			sourceTree = "<group>";
@@ -196,8 +205,11 @@
 			files = (
 				942D1EB91FDC1804009E2EAB /* SlideViewController.swift in Sources */,
 				942D1ECF1FDC49F5009E2EAB /* Topic.swift in Sources */,
+				943E839A1FDD27AB007687C1 /* AddTopicViewController.swift in Sources */,
 				942D1ED31FDC5AF5009E2EAB /* ProgressRing.swift in Sources */,
 				942D1ECD1FDC497D009E2EAB /* AnimatorFactory.swift in Sources */,
+				943E839E1FDD2FB4007687C1 /* TopicPreviewTableViewCell.swift in Sources */,
+				943E839C1FDD2D85007687C1 /* StartViewController.swift in Sources */,
 				942D1ECB1FDC446B009E2EAB /* CountDownButton.swift in Sources */,
 				942D1EB71FDC1804009E2EAB /* AppDelegate.swift in Sources */,
 				942D1ED11FDC4B1F009E2EAB /* PresentationViewController.swift in Sources */,

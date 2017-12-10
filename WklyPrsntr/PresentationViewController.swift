@@ -11,12 +11,13 @@ import UIKit
 class PresentationViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     var slides: [SlideViewController] = [SlideViewController]()
+    var topics: [Topic]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
         self.delegate = self
-        Topic.topics.enumerated().forEach() { (offset, topic) in
+        topics.enumerated().forEach() { (offset, topic) in
             let slideController = viewController(offset: offset, topic: topic)
             slides.append(slideController)
         }

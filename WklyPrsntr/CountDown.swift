@@ -18,6 +18,13 @@ extension Array {
 }
 
 class CountDown {
+    
+    enum State {
+        case counting
+        case stopped
+    }
+    
+    var state: State = .stopped
     var countdownTimer: Timer!
     var totalTime: Double {
         didSet {
@@ -32,6 +39,7 @@ class CountDown {
     }
     
     func startTimer() {
+        state = .counting
         countdownTimer = Timer.scheduledTimer(timeInterval: 1,
                                               target: self,
                                               selector: #selector(updateTime),
@@ -61,8 +69,9 @@ class CountDown {
     }
     
     func endTimer() {
+        state = .stopped
         countdownTimer.invalidate()
-        sayBye()
+//        sayBye()
     }
     
     static func timeFormatted(_ totalSeconds: Double) -> String {
